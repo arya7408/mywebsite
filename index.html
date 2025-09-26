@@ -1,143 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajapati Arya Vinodbhai - Resume Website</title>
-    <style>
-        /* Basic styling for the page */
-        body {
-            background-color: black; /* Black background as requested */
-            color: white; /* All text in white */
-            font-family: 'Arial', sans-serif; /* Modern, clean font */
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content for better appeal */
-            animation: fadeIn 1.5s ease-in; /* Subtle fade-in animation for attractiveness */
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        h1 {
-            font-size: 48px; /* Heading bigger than other letters, as requested */
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add a subtle glow for attractiveness */
-            margin-bottom: 20px;
-            color: #00ff00; /* A slight green tint to make it stand out on black background */
-        }
-
-        h2 {
-            font-size: 28px; /* Section headings slightly larger than normal text */
-            border-bottom: 2px solid white; /* Simple border for separation */
-            padding-bottom: 10px;
-            margin-top: 30px;
-            transition: transform 0.3s; /* Hover effect for interactivity */
-        }
-
-        h2:hover {
-            transform: scale(1.05); /* Slight zoom on hover to make it engaging */
-        }
-
-        p, ul {
-            font-size: 18px; /* Readable text size */
-            line-height: 1.6; /* Better readability */
-            margin: 10px 0;
-        }
-
-        section {
-            width: 80%; /* Keep it responsive and centered */
-            max-width: 800px; /* Limit width for desktop view */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay for sections to make text pop */
-            padding: 20px;
-            border-radius: 10px; /* Rounded corners for a modern look */
-            margin-bottom: 20px;
-        }
-
-        img {
-            max-width: 100%; /* Make images responsive */
-            border-radius: 8px; /* Soft edges for images */
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Subtle shadow for attractiveness */
-        }
-
-        /* Style for links */
-        a {
-            color: #00ff00; /* Green links to match the heading */
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: white; /* Change color on hover for interactivity */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prajapati Arya Vinodbhai - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Hero Section (Dark Theme) */
+    .hero {
+      background-color: #000;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3.5em;
+      margin: 0 0 20px 0;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+    }
+    .btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+    .btn:hover {
+      background: #f0f0f0;
+    }
+    /* Light Section (White BG) */
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      color: #000;
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .skills, .projects, .hobbies {
+      margin-top: 20px;
+    }
+    ul {
+      list-style: square;
+      line-height: 1.8;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #fff;
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: Big heading and a brief intro with an image -->
-    <header>
-        <h1>Prajapati Arya Vinodbhai</h1>
-        <p>Email: <a href="mailto:aryavp17@gmail.com">aryavp17@gmail.com</a> | Phone: <a href="tel:+919016830273">+91 9016830273</a></p>
-        <p>Address: Godhra, Panchamahalas, Gujarat</p>
-        <img src="https://source.unsplash.com/800x300/?coding" alt="Coding Illustration" style="width: 80%; margin-top: 20px;"> <!-- Replace with your own image URL if needed -->
-        <p>A passionate first-year B.Tech student eager to learn and grow in tech.</p>
-    </header>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Hello, I'm Prajapati Arya</h1>
+    <p>A passionate first-year B.Tech (Information Technology) student with a growing love for coding, problem-solving, and exploring cultures.</p>
+    <a href="#about" class="btn">Know More</a>
+  </div>
 
-    <!-- Objective Section -->
-    <section>
-        <h2>Objective</h2>
-        <p>Passionate first-year B.Tech (Information Technology) student with a strong foundation in C programming and a keen interest in learning C++, Java, Python, and Data Structures & Algorithms (DSA). Highly motivated to enhance coding skills and apply them through internships in reputed tech companies. Eager to learn, adapt, and contribute effectively to real-world projects while continuously exploring new cultures and ideas through travel.</p>
-    </section>
+  <!-- About Section -->
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>I’m currently pursuing B.Tech in Information Technology. I have a strong foundation in C programming and I’m learning C++, Java, Python, and Data Structures & Algorithms. I believe in continuous learning and want to apply my skills in real-world projects.</p>
+    <img src="https://images.unsplash.com/photo-1581091012184-5c8b9a8f3a3b" alt="Coding vibes">
+  </div>
 
-    <!-- Education Section -->
-    <section>
-        <h2>Education</h2>
-        <p>Bachelor of Technology (B.Tech) - Information Technology</p>
-        <p>[Your College Name], [City] (Expected Graduation: Year)</p>
-    </section>
+  <!-- Skills Section -->
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <ul>
+        <li><b>Languages:</b> C (learning), Basics of C++ & Java, starting Python</li>
+        <li><b>Concepts:</b> Problem solving, basic Data Structures and Algorithms</li>
+        <li><b>Tools:</b> CodeBlocks, Visual Studio, LeetCode</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Laptop Workspace">
+  </div>
 
-    <!-- Technical Skills Section -->
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>Programming Languages: C (Currently learning), Familiar with basics of C++ and Java, interested in Python</li>
-            <li>Concepts: Basic programming, problem solving, understanding of data structures & algorithms (learning stage)</li>
-            <li>Tools & Platforms: [Add any tools or platforms you have experience with, like CodeBlocks, Visual Studio, or online judges like LeetCode if you’ve used them]</li>
-        </ul>
-        <img src="https://source.unsplash.com/400x200/?tech" alt="Tech Skills Illustration" style="width: 100%;"> <!-- A simple image for visual appeal -->
-    </section>
+  <!-- Projects Section -->
+  <div class="section">
+    <h2>Projects & Learning</h2>
+    <div class="projects">
+      <ul>
+        <li>Implemented basic C programs (arrays, pointers, functions).</li>
+        <li>Exploring Object-Oriented Programming through C++.</li>
+        <li>Practicing coding challenges on HackerRank & CodeChef.</li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- Projects & Coursework Section -->
-    <section>
-        <h2>Projects & Coursework</h2>
-        <p>Learning and implementing C programs focused on control structures, arrays, functions, and pointers. Exploring foundational concepts in object-oriented programming through C++. Practicing problem-solving on platforms like [mention if you use any, e.g., HackerRank, CodeChef].</p>
-    </section>
+  <!-- Hobbies Section -->
+  <div class="section">
+    <h2>Hobbies & Interests</h2>
+    <div class="hobbies">
+      <ul>
+        <li>Reading technical and non-technical books</li>
+        <li>Learning emerging technologies</li>
+        <li>Traveling to explore diverse cultures</li>
+        <li>Taking part in coding challenges</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Travel">
+  </div>
 
-    <!-- Hobbies & Interests Section -->
-    <section>
-        <h2>Hobbies & Interests</h2>
-        <ul>
-            <li>Reading technical and non-technical books</li>
-            <li>Learning new and interesting technologies</li>
-            <li>Traveling and exploring diverse cultures for personal growth and refreshing experiences</li>
-            <li>Coding and participating in programming challenges</li>
-        </ul>
-        <img src="https://source.unsplash.com/400x200/?travel" alt="Travel Illustration" style="width: 100%;"> <!-- Image to make it attractive and relevant -->
-    </section>
-
-    <!-- Additional Information Section -->
-    <section>
-        <h2>Additional Information</h2>
-        <p>Strong enthusiasm for coding and problem-solving. Open to new learning opportunities and collaborative environments.</p>
-    </section>
-
-    <!-- Footer for contact and credits -->
-    <footer style="text-align: center; margin-top: 30px; font-size: 14px;">
-        <p>Thank you for visiting! Connect with me via email or phone. Designed by AI for a simple, attractive look.</p>
-    </footer>
+  <!-- Footer -->
+  <div class="footer">
+    <p>📧 aryavp17@gmail.com | 📞 +91 9016830273 | 📍 Godhra, Gujarat</p>
+    <p>&copy; 2024 Prajapati Arya | Built with ❤️ & HTML</p>
+  </div>
 </body>
 </html>
