@@ -1,145 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Prajapati Arya Vinodbhai - Resume</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajapati Arya Vinodbhai | Aspiring Developer Portfolio</title>
+    
+    <!-- Using a Google Font for a modern, monospaced terminal look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Define the Core Dark Mode Aesthetic */
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --accent-color: #00ff88; /* Bright Neon Green - Excellent for developer aesthetic */
+            --font-main: 'Roboto Mono', monospace;
+        }
 
-    body {
-      background-color: #000000;
-      color: #ffffff;
-      font-family: 'Poppins', sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      border: 2px solid #ff3333;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #ff3333;
-    }
-    h1 {
-      font-size: 4rem;
-      color: #ff3333;
-      margin-bottom: 30px;
-      letter-spacing: 3px;
-      text-align: center;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px #ff3333;
-    }
-    h2 {
-      font-size: 2.5rem;
-      color: #ff3333;
-      margin-top: 40px;
-      margin-bottom: 15px;
-      border-bottom: 3px solid #ff3333;
-      padding-bottom: 6px;
-      letter-spacing: 1.5px;
-    }
-    p, li {
-      font-size: 1.2rem;
-    }
-    ul {
-      padding-left: 25px;
-    }
-    a {
-      color: #ff6666;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #ff3333;
-      text-decoration: underline;
-    }
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 1.2rem;
-    }
-    .contact-item svg {
-      fill: #ff3333;
-      width: 24px;
-      height: 24px;
-    }
-    /* Section icon */
-    .section-icon {
-      vertical-align: middle;
-      width: 28px;
-      height: 28px;
-      fill: #ff3333;
-      margin-right: 10px;
-    }
-  </style>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            transition: background-color 0.5s;
+        }
+
+        /* Enforce the Big Heading Requirement */
+        h1 {
+            font-size: 3.5em; /* Extremely large */
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.1em;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+             color: var(--accent-color);
+             font-size: 1.1em;
+             margin-bottom: 5px;
+        }
+
+        /* General Links Styling */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--text-color);
+            background-color: var(--accent-color);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 10px;
+        }
+
+        /* Header and Contact Information */
+        .header-contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* Allows wrap on small screens */
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+            font-size: 0.9em;
+        }
+
+        .contact-info li {
+            margin: 5px 0;
+        }
+
+        /* Profile Image Placeholder */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            background-color: #1a1a1a; /* Dark gray fill */
+            border: 3px solid var(--accent-color);
+            border-radius: 50%;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto 20px;
+            /* Placeholder Text Styling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7em;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5); 
+        }
+
+        /* Section Specific Styling */
+        .section-content {
+            padding: 15px 0;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Highlight Code/Skills */
+        .skill-tag {
+            display: inline-block;
+            background-color: #333;
+            color: var(--accent-color);
+            padding: 5px 10px;
+            margin: 4px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+                text-align: center;
+            }
+            .header-contact {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-info {
+                text-align: center;
+            }
+            .profile-pic {
+                margin: 20px auto;
+            }
+            
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Prajapati Arya Vinodbhai</h1>
 
-    <div class="contact-info">
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg"><path d="M21 8V7l-3 2-2-2-6 6-2-2-4 4v2h18v-9zm-2-5c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-7c0-1.1.9-2 2-2h2l2-2h10z"/></svg>
-        <a href="mailto:aryavp17@gmail.com">aryavp17@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.56.57 1 1 0 011 1v3.25a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.25a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.2 1.11l-2.2 2.2z"/></svg>
-        +91 9016830273
-      </div>
-      <div class="contact-item">
-        <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 112.5-2.5 2.5 2.5 0 01-2.5 2.5z"/></svg>
-        Godhra, Panchamahalas, Gujarat
-      </div>
+    <div class="container">
+
+        <!-- PROFILE IMAGE (Placeholder for a picture) -->
+        <div class="profile-pic">
+            [YOUR PICTURE HERE]
+        </div>
+
+        <!-- HEADER & CONTACT -->
+        <header class="header-contact">
+            <div>
+                <h1>Prajapati Arya Vinodbhai</h1>
+                <p style="color: #ccc;">First-Year B.Tech (Information Technology) Student</p>
+                <p>Location: Godhra, Panchamahalas, Gujarat</p>
+            </div>
+            
+            <ul class="contact-info">
+                <li><a href="mailto:aryavp17@gmail.com">Email: aryavp17@gmail.com</a></li>
+                <li><a href="tel:+919016830273">Phone: +91 9016830273</a></li>
+                <li>(Expected Graduation: [Year])</li>
+            </ul>
+        </header>
+
+        <!-- OBJECTIVE -->
+        <section>
+            <h2>&gt; Objective Statement</h2>
+            <div class="section-content">
+                <p>Highly motivated first-year B.Tech student eager to transition foundational C programming knowledge into practical application. Seeking challenging internship opportunities in reputed tech companies to accelerate learning in DSA, C++, Java, and Python. Passionate about problem-solving and committed to continuous skill enhancement while contributing effectively to real-world software projects.</p>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2>&gt; Education</h2>
+            <div class="section-content">
+                <h3>Bachelor of Technology (B.Tech) - Information Technology</h3>
+                <p>[Your College Name], [City]</p>
+                <p>Status: Currently Enrolled (Expected Graduation: [Year])</p>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section>
+            <h2>&gt; Technical Skills</h2>
+            <div class="section-content">
+                
+                <p style="color: #ccc;">Programming & Concepts:</p>
+                <span class="skill-tag">C Language (Foundational)</span>
+                <span class="skill-tag">Basics of C++</span>
+                <span class="skill-tag">Basics of Java</span>
+                <span class="skill-tag">Interest in Python</span>
+                <span class="skill-tag">DSA (Learning Stage)</span>
+                <span class="skill-tag">Basic Programming Logic</span>
+                
+                <p style="color: #ccc; margin-top: 15px;">Tools & Platforms:</p>
+                <span class="skill-tag">[Add Tools, e.g., CodeBlocks]</span>
+                <span class="skill-tag">[Add Platforms, e.g., VS Code]</span>
+                <span class="skill-tag">[Add Judges, e.g., HackerRank]</span>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS & COURSEWORK -->
+        <section>
+            <h2>&gt; Coursework & Initiatives</h2>
+            <div class="section-content">
+                
+                <h3>C Programming Foundation</h3>
+                <ul>
+                    <li>Deep implementation practice focusing on control structures, arrays, functions, and pointers.</li>
+                    <li>Developed foundational programming logic essential for complex problem-solving.</li>
+                </ul>
+                
+                <h3>Object-Oriented Exploration (C++)</h3>
+                <ul>
+                    <li>Currently exploring foundational concepts of OOP, preparing for advanced development.</li>
+                </ul>
+
+                <h3>Competitive Practice</h3>
+                <ul>
+                    <li>Actively practicing core problem-solving challenges on platforms like [Mention Platform, e.g., HackerRank/CodeChef] to sharpen algorithmic thinking.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- HOBBIES & INTERESTS -->
+        <section>
+            <h2>&gt; Interests & Growth</h2>
+            <div class="section-content">
+                
+                <p>In addition to coding, I am committed to continuous personal growth:</p>
+                <ul>
+                    <li>Reading technical documentation and non-technical literature.</li>
+                    <li>Exploring new and emerging technologies (e.g., [mention specific area, like AI/Web3]).</li>
+                    <li>Traveling and exploring diverse cultures, which fosters adaptability and fresh perspectives.</li>
+                    <li>Active participation in programming challenges.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer style="text-align: center; margin-top: 50px; padding: 10px; border-top: 1px dashed #333;">
+            <p style="font-size: 0.8em; color: #555;">&copy; [Current Year] Prajapati Arya Vinodbhai. Code and Passion Driven.</p>
+        </footer>
+
     </div>
 
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7l10 5v7l-10 5-10-5v-7l10-5z"/></svg>Objective</h2>
-    <p>
-      Passionate first-year B.Tech (Information Technology) student with a strong foundation in C programming and a keen interest in learning C++, Java, Python, and Data Structures & Algorithms (DSA). Highly motivated to enhance coding skills and apply them through internships in reputed tech companies. Eager to learn, adapt, and contribute effectively to real-world projects while continuously exploring new cultures and ideas through travel.
-    </p>
-
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM7 17H5v-2h2v2zm0-4H5v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>Education</h2>
-    <p><strong>Bachelor of Technology (B.Tech) - Information Technology</strong><br />
-      [Your College Name], [City]<br />
-      (Expected Graduation: Year)
-    </p>
-
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a8 8 0 108 8 8.01 8.01 0 00-8-8zm1 13h-2v-2h2zm0-4h-2V7h2z"/></svg>Technical Skills</h2>
-    <ul>
-      <li><strong>Programming Languages:</strong> C (Currently learning), Familiar with basics of C++ and Java, interested in Python</li>
-      <li><strong>Concepts:</strong> Basic programming, problem solving, understanding of data structures & algorithms (learning stage)</li>
-      <li><strong>Tools & Platforms:</strong> [Add tools or platforms you have experience with]</li>
-    </ul>
-
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21H7v-2h2v2zm0-4H7v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2zm4 4h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>Projects & Coursework</h2>
-    <ul>
-      <li>Learning and implementing C programs focused on control structures, arrays, functions, and pointers.</li>
-      <li>Exploring foundational concepts in object-oriented programming through C++.</li>
-      <li>Practicing problem-solving on platforms like [HackerRank, CodeChef].</li>
-    </ul>
-
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Hobbies & Interests</h2>
-    <ul>
-      <li>Reading technical and non-technical books</li>
-      <li>Learning new and interesting technologies</li>
-      <li>Traveling and exploring diverse cultures for personal growth and refreshing experiences</li>
-      <li>Coding and participating in programming challenges</li>
-    </ul>
-
-    <h2><svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM11 17h2v-2h-2v2zm0-4h2V7h-2v6z"/></svg>Additional Information</h2>
-    <ul>
-      <li>Strong enthusiasm for coding and problem-solving</li>
-      <li>Open to new learning opportunities and collaborative environments</li>
-    </ul>
-  </div>
 </body>
 </html>
