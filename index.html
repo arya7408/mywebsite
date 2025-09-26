@@ -3,261 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prajapati Arya Vinodbhai | Aspiring Developer Portfolio</title>
-    
-    <!-- Using a Google Font for a modern, monospaced terminal look -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <title>Prajapati Arya Vinodbhai - Resume Website</title>
     <style>
-        /* Define the Core Dark Mode Aesthetic */
-        :root {
-            --bg-color: #000000;
-            --text-color: #ffffff;
-            --accent-color: #00ff88; /* Bright Neon Green - Excellent for developer aesthetic */
-            --font-main: 'Roboto Mono', monospace;
-        }
-
+        /* Basic styling for the page */
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
+            background-color: black; /* Black background as requested */
+            color: white; /* All text in white */
+            font-family: 'Arial', sans-serif; /* Modern, clean font */
             margin: 0;
             padding: 20px;
-            line-height: 1.6;
-            transition: background-color 0.5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content for better appeal */
+            animation: fadeIn 1.5s ease-in; /* Subtle fade-in animation for attractiveness */
         }
 
-        /* Enforce the Big Heading Requirement */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         h1 {
-            font-size: 3.5em; /* Extremely large */
-            color: var(--accent-color);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 0.1em;
-            font-weight: 700;
+            font-size: 48px; /* Heading bigger than other letters, as requested */
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add a subtle glow for attractiveness */
+            margin-bottom: 20px;
+            color: #00ff00; /* A slight green tint to make it stand out on black background */
         }
 
         h2 {
-            font-size: 1.5em;
-            color: var(--text-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 5px;
+            font-size: 28px; /* Section headings slightly larger than normal text */
+            border-bottom: 2px solid white; /* Simple border for separation */
+            padding-bottom: 10px;
             margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        
-        h3 {
-             color: var(--accent-color);
-             font-size: 1.1em;
-             margin-bottom: 5px;
+            transition: transform 0.3s; /* Hover effect for interactivity */
         }
 
-        /* General Links Styling */
+        h2:hover {
+            transform: scale(1.05); /* Slight zoom on hover to make it engaging */
+        }
+
+        p, ul {
+            font-size: 18px; /* Readable text size */
+            line-height: 1.6; /* Better readability */
+            margin: 10px 0;
+        }
+
+        section {
+            width: 80%; /* Keep it responsive and centered */
+            max-width: 800px; /* Limit width for desktop view */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay for sections to make text pop */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners for a modern look */
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%; /* Make images responsive */
+            border-radius: 8px; /* Soft edges for images */
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3); /* Subtle shadow for attractiveness */
+        }
+
+        /* Style for links */
         a {
-            color: var(--accent-color);
+            color: #00ff00; /* Green links to match the heading */
             text-decoration: none;
+            transition: color 0.3s;
         }
 
         a:hover {
-            color: var(--text-color);
-            background-color: var(--accent-color);
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-
-        /* Layout Container */
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 0 10px;
-        }
-
-        /* Header and Contact Information */
-        .header-contact {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            flex-wrap: wrap; /* Allows wrap on small screens */
-        }
-        
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            text-align: right;
-            font-size: 0.9em;
-        }
-
-        .contact-info li {
-            margin: 5px 0;
-        }
-
-        /* Profile Image Placeholder */
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            background-color: #1a1a1a; /* Dark gray fill */
-            border: 3px solid var(--accent-color);
-            border-radius: 50%;
-            overflow: hidden;
-            display: block;
-            margin: 0 auto 20px;
-            /* Placeholder Text Styling */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.7em;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.5); 
-        }
-
-        /* Section Specific Styling */
-        .section-content {
-            padding: 15px 0;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 20px;
-            margin-bottom: 30px;
-        }
-        
-        /* Highlight Code/Skills */
-        .skill-tag {
-            display: inline-block;
-            background-color: #333;
-            color: var(--accent-color);
-            padding: 5px 10px;
-            margin: 4px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2.5em;
-                text-align: center;
-            }
-            .header-contact {
-                flex-direction: column;
-                text-align: center;
-            }
-            .contact-info {
-                text-align: center;
-            }
-            .profile-pic {
-                margin: 20px auto;
-            }
-            
+            color: white; /* Change color on hover for interactivity */
         }
     </style>
 </head>
 <body>
+    <!-- Hero Section: Big heading and a brief intro with an image -->
+    <header>
+        <h1>Prajapati Arya Vinodbhai</h1>
+        <p>Email: <a href="mailto:aryavp17@gmail.com">aryavp17@gmail.com</a> | Phone: <a href="tel:+919016830273">+91 9016830273</a></p>
+        <p>Address: Godhra, Panchamahalas, Gujarat</p>
+        <img src="https://source.unsplash.com/800x300/?coding" alt="Coding Illustration" style="width: 80%; margin-top: 20px;"> <!-- Replace with your own image URL if needed -->
+        <p>A passionate first-year B.Tech student eager to learn and grow in tech.</p>
+    </header>
 
-    <div class="container">
+    <!-- Objective Section -->
+    <section>
+        <h2>Objective</h2>
+        <p>Passionate first-year B.Tech (Information Technology) student with a strong foundation in C programming and a keen interest in learning C++, Java, Python, and Data Structures & Algorithms (DSA). Highly motivated to enhance coding skills and apply them through internships in reputed tech companies. Eager to learn, adapt, and contribute effectively to real-world projects while continuously exploring new cultures and ideas through travel.</p>
+    </section>
 
-        <!-- PROFILE IMAGE (Placeholder for a picture) -->
-        <div class="profile-pic">
-            [YOUR PICTURE HERE]
-        </div>
+    <!-- Education Section -->
+    <section>
+        <h2>Education</h2>
+        <p>Bachelor of Technology (B.Tech) - Information Technology</p>
+        <p>[Your College Name], [City] (Expected Graduation: Year)</p>
+    </section>
 
-        <!-- HEADER & CONTACT -->
-        <header class="header-contact">
-            <div>
-                <h1>Prajapati Arya Vinodbhai</h1>
-                <p style="color: #ccc;">First-Year B.Tech (Information Technology) Student</p>
-                <p>Location: Godhra, Panchamahalas, Gujarat</p>
-            </div>
-            
-            <ul class="contact-info">
-                <li><a href="mailto:aryavp17@gmail.com">Email: aryavp17@gmail.com</a></li>
-                <li><a href="tel:+919016830273">Phone: +91 9016830273</a></li>
-                <li>(Expected Graduation: [Year])</li>
-            </ul>
-        </header>
+    <!-- Technical Skills Section -->
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Programming Languages: C (Currently learning), Familiar with basics of C++ and Java, interested in Python</li>
+            <li>Concepts: Basic programming, problem solving, understanding of data structures & algorithms (learning stage)</li>
+            <li>Tools & Platforms: [Add any tools or platforms you have experience with, like CodeBlocks, Visual Studio, or online judges like LeetCode if you’ve used them]</li>
+        </ul>
+        <img src="https://source.unsplash.com/400x200/?tech" alt="Tech Skills Illustration" style="width: 100%;"> <!-- A simple image for visual appeal -->
+    </section>
 
-        <!-- OBJECTIVE -->
-        <section>
-            <h2>&gt; Objective Statement</h2>
-            <div class="section-content">
-                <p>Highly motivated first-year B.Tech student eager to transition foundational C programming knowledge into practical application. Seeking challenging internship opportunities in reputed tech companies to accelerate learning in DSA, C++, Java, and Python. Passionate about problem-solving and committed to continuous skill enhancement while contributing effectively to real-world software projects.</p>
-            </div>
-        </section>
+    <!-- Projects & Coursework Section -->
+    <section>
+        <h2>Projects & Coursework</h2>
+        <p>Learning and implementing C programs focused on control structures, arrays, functions, and pointers. Exploring foundational concepts in object-oriented programming through C++. Practicing problem-solving on platforms like [mention if you use any, e.g., HackerRank, CodeChef].</p>
+    </section>
 
-        <!-- EDUCATION -->
-        <section>
-            <h2>&gt; Education</h2>
-            <div class="section-content">
-                <h3>Bachelor of Technology (B.Tech) - Information Technology</h3>
-                <p>[Your College Name], [City]</p>
-                <p>Status: Currently Enrolled (Expected Graduation: [Year])</p>
-            </div>
-        </section>
+    <!-- Hobbies & Interests Section -->
+    <section>
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Reading technical and non-technical books</li>
+            <li>Learning new and interesting technologies</li>
+            <li>Traveling and exploring diverse cultures for personal growth and refreshing experiences</li>
+            <li>Coding and participating in programming challenges</li>
+        </ul>
+        <img src="https://source.unsplash.com/400x200/?travel" alt="Travel Illustration" style="width: 100%;"> <!-- Image to make it attractive and relevant -->
+    </section>
 
-        <!-- TECHNICAL SKILLS -->
-        <section>
-            <h2>&gt; Technical Skills</h2>
-            <div class="section-content">
-                
-                <p style="color: #ccc;">Programming & Concepts:</p>
-                <span class="skill-tag">C Language (Foundational)</span>
-                <span class="skill-tag">Basics of C++</span>
-                <span class="skill-tag">Basics of Java</span>
-                <span class="skill-tag">Interest in Python</span>
-                <span class="skill-tag">DSA (Learning Stage)</span>
-                <span class="skill-tag">Basic Programming Logic</span>
-                
-                <p style="color: #ccc; margin-top: 15px;">Tools & Platforms:</p>
-                <span class="skill-tag">[Add Tools, e.g., CodeBlocks]</span>
-                <span class="skill-tag">[Add Platforms, e.g., VS Code]</span>
-                <span class="skill-tag">[Add Judges, e.g., HackerRank]</span>
+    <!-- Additional Information Section -->
+    <section>
+        <h2>Additional Information</h2>
+        <p>Strong enthusiasm for coding and problem-solving. Open to new learning opportunities and collaborative environments.</p>
+    </section>
 
-            </div>
-        </section>
-
-        <!-- PROJECTS & COURSEWORK -->
-        <section>
-            <h2>&gt; Coursework & Initiatives</h2>
-            <div class="section-content">
-                
-                <h3>C Programming Foundation</h3>
-                <ul>
-                    <li>Deep implementation practice focusing on control structures, arrays, functions, and pointers.</li>
-                    <li>Developed foundational programming logic essential for complex problem-solving.</li>
-                </ul>
-                
-                <h3>Object-Oriented Exploration (C++)</h3>
-                <ul>
-                    <li>Currently exploring foundational concepts of OOP, preparing for advanced development.</li>
-                </ul>
-
-                <h3>Competitive Practice</h3>
-                <ul>
-                    <li>Actively practicing core problem-solving challenges on platforms like [Mention Platform, e.g., HackerRank/CodeChef] to sharpen algorithmic thinking.</li>
-                </ul>
-
-            </div>
-        </section>
-
-        <!-- HOBBIES & INTERESTS -->
-        <section>
-            <h2>&gt; Interests & Growth</h2>
-            <div class="section-content">
-                
-                <p>In addition to coding, I am committed to continuous personal growth:</p>
-                <ul>
-                    <li>Reading technical documentation and non-technical literature.</li>
-                    <li>Exploring new and emerging technologies (e.g., [mention specific area, like AI/Web3]).</li>
-                    <li>Traveling and exploring diverse cultures, which fosters adaptability and fresh perspectives.</li>
-                    <li>Active participation in programming challenges.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer style="text-align: center; margin-top: 50px; padding: 10px; border-top: 1px dashed #333;">
-            <p style="font-size: 0.8em; color: #555;">&copy; [Current Year] Prajapati Arya Vinodbhai. Code and Passion Driven.</p>
-        </footer>
-
-    </div>
-
+    <!-- Footer for contact and credits -->
+    <footer style="text-align: center; margin-top: 30px; font-size: 14px;">
+        <p>Thank you for visiting! Connect with me via email or phone. Designed by AI for a simple, attractive look.</p>
+    </footer>
 </body>
 </html>
